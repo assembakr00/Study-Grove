@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study Grove</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Next Exam</h1>
+                <p>No exam added yet.</p>
+                    <form>
+                        <label for="exam-name">Exam Name:</label>
+                        <input type="text" id="exam-name" name="exam-name" required>
+                        <label for="exam-date">Exam Date:</label>
+                        <input type="date" id="exam-date" name="exam-date" required>
+                        <button type="submit">Add Exam</button>
+                    </form>
+            </section>
+
+            <section>
+                <h1>Study Sessions</h1>
+                <p>No study sessions added yet.</p>
+                    <label for="session-name">Session subject/topic:</label>
+                    <input type="text" id="session-name" name="session-name" required>
+                        <div class="timer-container">
+                            <div id="timer-display">01:00</div>
+                            <button id="start-btn">Start</button>
+                            <button id="pause-btn">Pause</button>
+                            <button id="reset-btn">Reset</button>
+                        </div>
+            </section>
+            <section>
+                <h1>Todays study</h1>
+                <p>No study sessions Today yet.</p>
+            </section>                
+        </main>
+    </body>
+</html>
