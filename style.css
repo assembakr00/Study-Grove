@@ -3,24 +3,54 @@
     --text: #050505;
     --primary: #f89500;
     --secondary: #fa870493;
-    --accent: #ff9800;
+    --accent: #c07e1aad;
     --accent2: #2196F3;
     --start-btn: #f89500;
     --pause-btn: #2196F3;
     --finish-btn: #ff1a0a;
 }
 
+@font-face {
+    font-family: "peaberry";
+    src: url("Assets/Peaberry Font Family/Peaberry Base/PeaberryBase.woff2") format("woff2");
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: ;
+    font-family: "peaberry", sans-serif;
     margin: 0;
     padding: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
 .timer-container {
     display: flex;
-    flex-direction: line;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -38,7 +68,6 @@ body {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
 }
 #pause-btn {
@@ -47,7 +76,6 @@ body {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
 }
 #finish-btn {
@@ -56,6 +84,5 @@ body {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
 }
