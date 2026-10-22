@@ -1,3 +1,61 @@
 :root {
-    
+    --bg: #c0b29edc;
+    --text: #050505;
+    --primary: #f89500;
+    --secondary: #fa870493;
+    --accent: #ff9800;
+    --accent2: #2196F3;
+    --start-btn: #f89500;
+    --pause-btn: #2196F3;
+    --finish-btn: #ff1a0a;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: ;
+    margin: 0;
+    padding: 0;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: line;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#timer-display {
+    font-size: 48px;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+#start-btn {
+    background-color: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#pause-btn {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#finish-btn {
+    background-color: var(--finish-btn);
+    color: var(--text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
 }
