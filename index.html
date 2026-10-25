@@ -11,8 +11,8 @@
         <main>
             <section>
                 <h1>Next Exam</h1>
-                <p>No exam added yet.</p>
-                    <form>
+                <p id="exam-display">No exam added yet.</p>
+                    <form id="exam-form">
                         <label for="exam-name">Exam Name:</label>
                         <input type="text" id="exam-name" name="exam-name" required>
                         <label for="exam-date">Exam Date:</label>
@@ -32,24 +32,30 @@
                             <button type="button" id="start-btn" aria-label="Start">
                                 <img src="Assets/start-btn.png" alt="">
                             </button>
-                            <button type="button" id="pause-btn">
+                            <button type="button" id="pause-btn" aria-label="Pause">
                                 <img src="Assets/pause-btn.png" alt="">
                             </button>
                             
-                            <button type="button" id="finish-btn" aria-label="Finish session">
+                            <button type="button" id="finish-btn" aria-label="Finish">
                                 <img src="Assets/stop-btn.png" alt="">
                             </button>
                         </div>
             </section>
             <section>
                 <h1>Today's study</h1>
-                <p>No study sessions Today yet.</p>
+                <p id="today-total">Studied today: 00:00:00</p>
+                <p id="today-empty">No study sessions today yet.</p>
+                <ul id="today-list"></ul>
             </section>
             <section>
                 <h1>Study archive</h1>
-                <p>No completed sessions yet.</p>
+                <p id="archive-empty">No completed sessions yet.</p>
+                <ul id="archive-list"></ul>
             </section>
         </main>
+        <footer>
+            <button type="button" id="reset-data-btn">Reset saved data</button>
+        </footer>
         <script src="app.js"></script>
     </body>
 </html>

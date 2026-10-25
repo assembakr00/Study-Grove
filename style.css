@@ -86,3 +86,32 @@ button {
     padding: 10px 20px;
     font-size: 16px;
 }
+
+.timer-container button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.timer-container button img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+}
+
+.timer-container {
+    gap: 12px;
+}
+
+footer {
+    margin: 8px 20px 24px;
+    text-align: center;
+}
+
+#reset-data-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
