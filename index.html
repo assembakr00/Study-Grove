@@ -28,10 +28,17 @@
                     <input type="text" id="session-name" name="session-name" required>
                     
                             <div id="timer-display">00:00:00</div>
-                        <div class="timer-container"></div>
-                            <button id="start-btn">Start</button>
-                            <button id="pause-btn">Pause</button>
-                            <button id="finish-btn">Finish</button>
+                        <div class="timer-container">
+                            <button type="button" id="start-btn" aria-label="Start">
+                                <img src="Assets/start-btn.png" alt="">
+                            </button>
+                            <button type="button" id="pause-btn">
+                                <img src="Assets/pause-btn.png" alt="">
+                            </button>
+                            
+                            <button type="button" id="finish-btn" aria-label="Finish session">
+                                <img src="Assets/stop-btn.png" alt="">
+                            </button>
                         </div>
             </section>
             <section>

@@ -1,5 +1,5 @@
 :root {
-    --bg: #c0b29edc;
+    --bg: #caa776dc;
     --text: #050505;
     --primary: #f89500;
     --secondary: #fa870493;
@@ -62,6 +62,7 @@ button {
     align-items: center;
     display: flex;
 }
+
 #start-btn {
     background-color: var(--primary);
     color: var(--text);
@@ -84,5 +85,4 @@ button {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
 }
