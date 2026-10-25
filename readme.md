@@ -2,7 +2,7 @@
 
 hi and welcome to study grove V1.0
 
-this is just an MVP rn and as i update it i will change info here and how to run it u an see it in the demo link or github pages link!!
+this is just an MVP rn and as i update it i will change info here and how to run it u an see it in the demo link or github pages link which is this https://assembakr00.github.io/Study-Grove/
 
 #What is it?
 
