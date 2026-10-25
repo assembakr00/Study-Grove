@@ -16,4 +16,5 @@ well i want to do leaderboards IF it grows and add a choice to connect other stu
 
 #FAQs (i think ppl will ask after i do the things above)
 
-things like what if ppl cheat their time is i think is most asked well for now there no leaderboard so ur cheating urself and after a leaderboard i can add a webcam ofc and broswer tracking is the first thing that gonna roll out bec its far easier than desktop and idk i didnt think abt other questions but ppl wont ask bec its still very basic but thx for reading anyways byeee!!!!!!!
+things like what if ppl cheat their time is i think is most asked well for now there no leaderboard so ur cheating urself and after a leaderboard i can add a webcam ofc and broswer tracking is the first thing that gonna roll out bec its far easier than desktop
+and u cant reapet names for subjects but u can make for ex. if its math make it 102 or smth and i will add a thing where u can change the sessions name in the future too!! and idk i didnt think abt other questions but ppl wont ask bec its still very basic but thx for reading anyways byeee!!!!!!!
