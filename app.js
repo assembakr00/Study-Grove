@@ -14,6 +14,8 @@ const examDate = document.getElementById("exam-date");
 const examDisplay = document.getElementById("exam-display");
 const resetDataButton = document.getElementById("reset-data-btn");
 
+
+
 const storageKey = "studySessions";
 const examStorageKey = "studyExam";
 let timerState = "idle";
@@ -23,6 +25,8 @@ let timerInterval = null;
 let activeSubject = "";
 let sessions = JSON.parse(localStorage.getItem(storageKey) || "[]");
 let exam = JSON.parse(localStorage.getItem(examStorageKey) || "null");
+
+
 
 function formatDuration(totalSeconds) {
     const hours = Math.floor(totalSeconds / 3600);
@@ -112,6 +116,11 @@ examForm.addEventListener("submit", (event) => {
     renderExam();
 });
 
+
+
+
+
+
 startButton.addEventListener("click", () => {
     if (timerState === "idle") {
         activeSubject = sessionName.value.trim();
@@ -137,6 +146,7 @@ startButton.addEventListener("click", () => {
     updateTimer();
 });
 
+
 pauseButton.addEventListener("click", () => {
     if (timerState !== "running") return;
     elapsedBeforePause += Date.now() - startedAt;
@@ -145,6 +155,7 @@ pauseButton.addEventListener("click", () => {
     timerInterval = null;
     updateTimer();
 });
+
 
 finishButton.addEventListener("click", () => {
     if (timerState === "idle") return;
@@ -176,6 +187,9 @@ finishButton.addEventListener("click", () => {
     activeSubject = "";
     timerDisplay.textContent = "00:00:00";
 });
+
+
+
 
 resetDataButton.addEventListener("click", () => {
     const confirmed = confirm(
