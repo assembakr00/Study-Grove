@@ -32,9 +32,16 @@ body.normal-font {
     top: 16px;
     left: 16px;
     z-index: 2;
-    padding: 6px 10px;
-    font-size: 24px;
+    padding: 6px;
+    background: var(--accent);
     cursor: pointer;
+}
+
+#menu-btn img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
 }
 
 #sidebar {
@@ -47,7 +54,6 @@ body.normal-font {
     box-sizing: border-box;
     padding: 20px;
     background: var(--accent);
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
     transform: translateX(-100%);
     transition: transform 0.2s ease;
 }
