@@ -13,12 +13,17 @@ const examName = document.getElementById("exam-name");
 const examDate = document.getElementById("exam-date");
 const examDisplay = document.getElementById("exam-display");
 const resetDataButton = document.getElementById("reset-data-btn");
+const menuButton = document.getElementById("menu-btn");
+const closeMenuButton = document.getElementById("close-menu-btn");
+const sidebar = document.getElementById("sidebar");
+const fontToggle = document.getElementById("font-toggle");
 
 
 
 const storageKey = "studySessions";
 const activeStorageKey = "studyActiveSession";
 const examStorageKey = "studyExam";
+const fontStorageKey = "studyFont";
 let timerState = "idle";
 let startedAt = null;
 let elapsedBeforePause = 0;
@@ -26,6 +31,14 @@ let timerInterval = null;
 let activeSubject = "";
 let sessions = JSON.parse(localStorage.getItem(storageKey) || "[]");
 let exam = JSON.parse(localStorage.getItem(examStorageKey) || "null");
+
+function setFont(font) {
+    document.body.classList.toggle("normal-font", font === "normal");
+    fontToggle.textContent = font === "normal"
+        ? "Use pixel font"
+        : "Use normal font";
+    localStorage.setItem(fontStorageKey, font);
+}
 
 
 
@@ -126,6 +139,21 @@ function saveActiveSession() {
         elapsedBeforePause
     }));
 }
+
+menuButton.addEventListener("click", () => {
+    sidebar.classList.add("open");
+});
+
+closeMenuButton.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+});
+
+fontToggle.addEventListener("click", () => {
+    const nextFont = document.body.classList.contains("normal-font")
+        ? "pixel"
+        : "normal";
+    setFont(nextFont);
+});
 
 
 
@@ -230,6 +258,7 @@ resetDataButton.addEventListener("click", () => {
     sessionName.value = "";
     renderSavedSessions();
     renderExam();
+    setFont(localStorage.getItem(fontStorageKey) || "pixel");
     localStorage.removeItem(activeStorageKey);
 });
 

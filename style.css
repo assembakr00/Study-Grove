@@ -23,6 +23,60 @@ body {
     padding: 0;
 }
 
+body.normal-font {
+    font-family: Arial, sans-serif;
+}
+
+#menu-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    padding: 6px 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 220px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    background: var(--accent);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#sidebar h2 {
+    margin-top: 40px;
+}
+
+#sidebar button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+#close-menu-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 2px 8px !important;
+    font-size: 20px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -103,15 +157,4 @@ button {
 
 .timer-container {
     gap: 12px;
-}
-
-footer {
-    margin: 8px 20px 24px;
-    text-align: center;
-}
-
-#reset-data-btn {
-    padding: 6px 10px;
-    font-size: 14px;
-    cursor: pointer;
 }

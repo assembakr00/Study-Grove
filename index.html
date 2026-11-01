@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <button type="button" id="menu-btn" aria-label="Open menu">☰</button>
+        <aside id="sidebar">
+            <button type="button" id="close-menu-btn" aria-label="Close menu">×</button>
+            <h2>Settings</h2>
+            <button type="button" id="font-toggle">Use normal font</button>
+            <button type="button" id="reset-data-btn">Reset saved data</button>
+        </aside>
         <main>
             <section>
                 <h1>Next Exam</h1>
@@ -53,9 +60,6 @@
                 <ul id="archive-list"></ul>
             </section>
         </main>
-        <footer>
-            <button type="button" id="reset-data-btn">Reset saved data</button>
-        </footer>
         <script src="app.js"></script>
     </body>
 </html>
