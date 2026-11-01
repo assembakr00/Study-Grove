@@ -1,6 +1,6 @@
 # Study Grove
 
-hi and welcome to study grove V1.0(yeah its new)
+hi and welcome to study grove V1.1(yeah its new)
 
 this is just an MVP rn and as i update it i will change info here and how to run it u an see it in the demo link or github pages link which is this https://assembakr00.github.io/Study-Grove/
 
@@ -13,6 +13,10 @@ its not fancy nor complicated it acts as a tracker for ur studying and an archiv
 # what you gonna do next?!
 
 well i want to do leaderboards IF it grows and add a choice to connect other study apps and make cool graphs and communties and posts and chats other things like hackatime but that can take a month or 2 and if it doesnt work its just cool and useful too.
+
+# week 2 whats new?
+
+the thing that mainly changed sure i was planning for visuals and using libaries but i worked on major problmes in js like losing current recoerd when refreshing or even logging in empty string so i fixed that which took over 5 hrs bec i added like idk 300 lines and added a reset btn and new vars anyways enough of js i added a side menu which bec its only the settings for now s i made the settings in tehre u can change the font or reset ur demo plus i worked on making 2 langs bt i think that for next time bec its super hard also if u wanna know what to check its bug tests am pretty sure i summed them up and fixed them and sorry for the bad looking page
 
 # FAQs (i think ppl will ask after i do the things above)
 
