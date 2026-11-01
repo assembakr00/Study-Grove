@@ -17,6 +17,7 @@ const resetDataButton = document.getElementById("reset-data-btn");
 
 
 const storageKey = "studySessions";
+const activeStorageKey = "studyActiveSession";
 const examStorageKey = "studyExam";
 let timerState = "idle";
 let startedAt = null;
@@ -117,7 +118,14 @@ examForm.addEventListener("submit", (event) => {
 });
 
 
-
+function saveActiveSession() {
+    localStorage.setItem(activeStorageKey, JSON.stringify({
+        subject: activeSubject,
+        state: timerState,
+        startedAt,
+        elapsedBeforePause
+    }));
+}
 
 
 
@@ -128,7 +136,11 @@ startButton.addEventListener("click", () => {
             alert("Enter a subject or topic before starting.");
             return;
         }
-
+        
+        if (activeSubject.length < 2 || activeSubject.length > 50) {
+            alert("Use a name between 2 and 50 characters.");
+            return;
+        }
         const alreadyUsed = sessions.some(
             (session) => session.subject.toLowerCase() === activeSubject.toLowerCase()
         );
@@ -144,6 +156,7 @@ startButton.addEventListener("click", () => {
     startedAt = Date.now();
     timerInterval = setInterval(updateTimer, 1000);
     updateTimer();
+    saveActiveSession();
 });
 
 
@@ -154,6 +167,7 @@ pauseButton.addEventListener("click", () => {
     clearInterval(timerInterval);
     timerInterval = null;
     updateTimer();
+    saveActiveSession();
 });
 
 
@@ -186,9 +200,8 @@ finishButton.addEventListener("click", () => {
     elapsedBeforePause = 0;
     activeSubject = "";
     timerDisplay.textContent = "00:00:00";
+    localStorage.removeItem(activeStorageKey);
 });
-
-
 
 
 resetDataButton.addEventListener("click", () => {
@@ -217,7 +230,28 @@ resetDataButton.addEventListener("click", () => {
     sessionName.value = "";
     renderSavedSessions();
     renderExam();
+    localStorage.removeItem(activeStorageKey);
 });
+
+
+
+const savedActiveSession = JSON.parse(
+    localStorage.getItem(activeStorageKey) || "null"
+);
+
+if (savedActiveSession) {
+    activeSubject = savedActiveSession.subject;
+    timerState = savedActiveSession.state;
+    startedAt = savedActiveSession.startedAt;
+    elapsedBeforePause = savedActiveSession.elapsedBeforePause;
+    sessionName.value = activeSubject;
+
+    updateTimer();
+
+    if (timerState === "running") {
+        timerInterval = setInterval(updateTimer, 1000);
+    }
+}
 
 renderSavedSessions();
 renderExam();
