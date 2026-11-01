@@ -8,7 +8,7 @@ this is just an MVP rn and as i update it i will change info here and how to run
 
 Study grove is easy and u will be fimiliar with it if you know or use hackatime for tracking your coding but this is for any type of studying
 
-its not fancy nor complaicted it acts as a tracker for ur studying and an archive for ur history with study session and u can add an exam as a goal or a deadline to study for so u have a clear goal its pretty simple and cool and its mainly for studying but you can track anything else you want!
+its not fancy nor complicated it acts as a tracker for ur studying and an archive for ur history with study session and u can add an exam as a goal or a deadline to study for so u have a clear goal its pretty simple and cool and its mainly for studying but you can track anything else you want!
 
 # what you gonna do next?!
 
